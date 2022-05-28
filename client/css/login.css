@@ -1,0 +1,110 @@
+/* reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#form-login {
+    position: relative;
+    box-sizing: border-box;
+    top:25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 48px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    animation: modalFadeIn ease 0.4s;
+    margin-top: 62px;
+}
+#form-login .close-login {
+    float: right;
+    cursor: pointer;
+}
+#form-login .close-login:hover {
+    color: red;
+}
+#form-login .form-heading {
+    font-size: 29px;
+    font-weight: 700;
+    text-align: left;
+    display: block;
+    padding: 2px 0;
+}
+#form-login .form-username {
+    display: flex;
+    flex-direction: column;
+}
+.fif_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 29px;
+}
+#form-login label {
+    font-weight: 600;
+    font-size: 16px;
+}
+#form-login span {
+    font-size: 14px;
+}
+#form-login span a {
+    color: #04aa6d;
+    margin-left: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+#form-login .form-input input{
+    width: 100%;
+    padding: 15px;
+    margin: 6px 0;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+}
+#form-login .form-pass span {
+    color: #282a35;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.form-pass span i {
+    margin-right: 4px;
+}
+#form-login .form-submit:hover{
+    background-color: #059862;
+}
+#form-login .form-submit {
+    margin-top: 55px;
+    width: 100%;
+    color: #fff;
+    background-color: #04aa6d;
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 25px;
+    line-height: 1.17;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
+#form-login .forgot_pass {
+    margin-top: 18px;
+    text-align: right;
+}
+#form-login .forgot_pass:hover a {
+    color: #04aa6d;
+}
+#form-login .forgot_pass a {
+    font-size: 14px;
+    color: #282a35;
+    text-decoration: none;
+    font-weight: 600; 
+}

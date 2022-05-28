@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../client/css/weather.css">
+    <link rel="stylesheet" href="../client/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="wrapper-Nav">
+            <div id="Nav">
+                <div class="position-sitcky body-logo-wrappe">
+                    <a href="index.html">
+                        <i class="fa-brands fa-qq logo"></i>
+                    </a>
+                    <h4 class="logo-heading"> Ninja school---!</h4>
+                    
+                </div>
+                <ul class="nav">
+                    <li  class="menu-c1">
+                        <span>
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <a href="index.html" class="Nav-heading display-none">Home</a> 
+                        </span>
+                    </li>
+                    <li class="menu-c1">
+                        <span>
+                            <i class="fa-solid fa-gamepad"></i>
+                            <p class="Nav-heading display-none">Bảng điều khiển</p> 
+                        </span>
+                        <ul class="subnav subnav0">
+                            <li><a href="dashBoard.html">Bảng điều khiển 1</a></li>
+                            <li><a href="dashBoardDevice.html">Bảng điều khiển 2</a></li>
+                            <li><a href="#">Bảng điều khiển 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-c1">
+                        <span>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <p class="Nav-heading display-none"> Dự báo thời tiết</p>
+                        </span>
+                        <ul class="subnav subnav1">
+                            <li><a href="weatherforecast.html">Quang 1</a></li>
+                            <li><a href="#">Quang 2</a></li>
+                            <li><a href="#">Quang 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-c1 active">
+                        <span>
+                            <i class="fa-solid fa-chart-line"></i>
+                            <p class="Nav-heading display-none"> Xem biểu đồ thời tiết</p>
+                        </span>
+                        <ul class="subnav subnav2">
+                            <li><a href="#">Quang 1</a></li>
+                            <li><a href="#">Quang 2</a></li>
+                            <li><a href="#">Quang 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-c1">
+                        <span>
+                            <i class="fa-solid fa-gear"></i>
+                            <p class="Nav-heading display-none"> Cài đặt</p>
+                        </span>
+                        <ul class="subnav3 subnav">
+                            <li><a href="#">Cài đặt kết nối</a></li>
+                            <li><a href="#">Cài đặt tài khoản</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-c1">
+                        <span>
+                            <i class="fa-solid fa-circle-question"></i>
+                            <p class="Nav-heading display-none">Trợ giúp & hỗ trợ</p>
+                        </span>
+                        <ul class="subnav4 subnav">
+                            <li><a href="#">Trung tâm trợ giúp</a></li>
+                            <li><a href="#">Hộp thư hỗ trợ</a></li>
+                            <li><a href="#">Báo cáo sự cố</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-c1">
+                        <span>
+                            <i class="fas fa-envelope-open-text"></i>
+                            <p class="Nav-heading display-none">Đóng góp ý kiến</p> 
+                        </span>
+                    </li>
+                    <li class="menu-c1">
+                        <span>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p class="Nav-heading display-none log-out">Đăng xuất</p>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="wrapper-body">
+                <div id="head" class="position-sitcky">
+                    <span id="btn-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                    <div class="head-search">
+                        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <input  type="text" id="fname" name="fname" placeholder=" Tìm kiếm...."><br><br>
+                    </div>
+                    <span class="sub-head">
+                        <span class="head-icon">
+                            <i class="fa-solid fa-sun"></i>
+                            <i class="fa-solid fa-bell"></i>
+                        </span>
+                        <div class="account" ><a class="btn-login" href="login.html">Đăng nhập</a></div>
+                    </span>
+                </div>
+                <!-- Begin Content -->
+                <div id="content">
+                    <div id="content-heading">
+                        <h3>Dự báo thời tiết</h3>
+                        <div id="search-bar">
+                            <i class="fa-solid fa-magnifying-glass-location search-city-icon"></i>
+                            <input type="text" name="search-city" placeholder="Tìm kiếm Thành Phố" id="search-city-input" class="awesomplete">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    
+                    <div id="list-timeline-werk">
+                        <div class="wrapper-day col-seven">
+                            <div class="sub-day1">
+                                <p>Mo</p>
+                                <p>09</p>
+                            </div>
+                            <div class="sub-day2">
+                                <i class="fa-solid fa-cloud-sun-rain icon-weather"></i>
+                                <p class="temperature">29°</p>
+                            </div>
+                        </div>
+                        <div class="wrapper-day col-seven">
+                            <div class="sub-day1">
+                                <p>Tu</p>
+                                <p>10</p>
+                            </div>
+                            <div class="sub-day2">
+                                <i class="fa-solid fa-cloud-sun-rain icon-weather"></i>
+                                <p class="temperature">29°</p>
+                            </div>
+                        </div>
+                        <div class="wrapper-day col-seven">
+                            <div class="sub-day1">
+                                <p>We</p>
+                                <p>11</p>
+                            </div>
+                            <div class="sub-day2">
+                                <i class="fa-solid fa-cloud-sun-rain icon-weather"></i>
+                                <p class="temperature">29°</p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <p class="city-name">Thành phố</p>
+                    </div>
+                    <div class="time-now">
+                        <label for="">Thời gian dự báo</label>
+                        <div class="value-time"> --:--:--</div>
+                    </div>
+                    <div class="information-weather">
+                        <div class="main-section">
+                                <div class="main-part">
+                                    <h2 class="value-tempera">29°</h2>
+                                <img class="wather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="wather-icon">
+                                </div>
+                                <div class="extra-part">
+                                    <p class="wather-state">Mây thưa</p>
+                                    <p class="wind">Gió: 5km/h</p>
+                                    <p class="humidity">Độ ẩm : 70%</p>
+                                </div>
+                        </div>
+                        <div class="additonal-section">
+                            <div class="row">
+                                <div class="lable">Mặt trời mọc</div>
+                                <div class="value sunrise">6:30</div>
+                            </div>
+                            <div class="row">
+                                <div class="lable">Mặt trời lặn</div>
+                                <div class="value sunset">17:30</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- End Content -->
+        </div>
+            
+        
+        
+
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/wather.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+</body>
+</html>

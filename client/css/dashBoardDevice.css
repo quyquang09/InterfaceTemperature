@@ -1,0 +1,246 @@
+.col-two{
+    width: 50%;
+}
+.col {
+    float: left;
+    padding: 0 30px;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+.icon-btn {
+    background: #798399;
+    box-shadow: 0 0 7px #070e0e; 
+    cursor: pointer;
+    padding: 7px 8px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+#content {
+    max-width: 900px;
+    min-width: 720px;
+    margin: auto;
+}
+.device-body {
+    display: block;
+    background-color: #323844;
+    padding: 0 12px;
+    border-radius: 40px;
+}
+.img-device {
+    width: 100%;
+}
+.img-device img {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    display: block;
+    margin:10px auto;
+    padding-top: 18px;
+}
+.device-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.device-address h3 {
+    margin-left: 12px;
+}
+#nav-control {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 17px 0px;
+}
+/* Tivi */
+#device-Tivi {
+}
+.device-body .control-tivi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+.control-tivi .progress-bar-wrapper 
+{
+    width: 100%;
+    height: 25px;
+    background-color: #cac5ac;
+    margin: 20px 15px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+}
+.control-tivi .progress-bar {
+    height: 100%;
+    width: 50%;
+    background: #26c248;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    opacity: 0.8;
+}
+.control-tivi .device-value {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+}
+#subnav-control {
+    margin: 12px 0;
+    padding: 12px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#subnav-control .sub1, #subnav-control .sub2 {
+    cursor: pointer;
+    font-size: 23px;
+    width: 45%;
+    height: 26px;
+    margin: 16px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #15181f;
+    color: #ffffff;
+    border-radius: 25px;
+    box-shadow: -3px -3px 6px #15181f;
+}
+#subnav-control .sub2 button {
+    padding: 3px;
+    border-radius: 30px;
+}
+/* Quạt */
+#device-Lamp .timeused,
+#device-Lamp .status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+.timer-val input[type="number"] {
+    width: 50px;
+    height: 30px;
+}
+.timer-val {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.timer #save-timer {
+    margin-left: 10px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #03f437;
+}
+.timer p {
+    width: 100%;
+}
+
+
+/* Nút toggle */
+.toggle-button-cover {
+    position: relative;
+    padding: 40px 15px 30px 15px;
+  }
+  
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+.button {
+    position: relative;
+    top: 50%;
+    width: 84px;
+    height: 38px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+  
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+}
+  
+.button.b2 {
+    border-radius: 2px;
+}
+.switch-toggle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+  
+.knobs {
+    z-index: 2;
+}
+  
+.layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+  
+  /* Button 1 */
+#button-1 .knobs:before {
+    content: "OFF";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 14px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #f44336;
+    border-radius: 50%;
+    transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+  
+#button-1 .switch-toggle:checked + .knobs:before {
+    content: "ON";
+    left: 48px;
+    background-color: #03f437;
+}
+  
+#button-1 .switch-toggle:checked ~ .layer {
+    background-color: #fcebeb;
+}
+  
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+    transition: 0.3s ease all;
+}

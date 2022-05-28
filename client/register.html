@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styleRegister.css"> -->
+    <script src="https://kit.fontawesome.com/20350b7c07.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../client/css/register.css">
+    <!-- jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Đăng kí tài khoản</title>
+    <script type="text/javascript" src="js/config.js"></script>
+</head>
+<body>
+  
+    <div class="register">
+        <div class="register-connect">
+          <h1>Đăng nhập bằng</h1>
+          <a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+          <a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
+          <a href="#" class="btn btn-social btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
+          <a href="#" class="btn btn-social btn-linkedin"><i class="fa fa-linkedin"></i> Sign in with Linkedin</a>
+          <img src="../client/img/anhdep.jfif" alt="ảnh tạo trái tim">
+        </div>
+        <div class="register-classic">
+          <h2>Đăng kí tài khoản</h2>
+          <div class="doLogin"><a title="Quay lại trang đăng nhập" href="login.html">Bạn đã có tài khoản ?</a></div>
+          <div class="clear"></div>
+          <form action="register" method="post" class="form" id="form-1">
+            <p class="desc"></p>
+            <div class="spacer"></div>
+            <div class="form-group">
+                <fieldset class="username">
+                    <label for="username" class="form-label">Tên đăng nhập</label>
+                    <input id="username" name="username" type="text" placeholder="VD: quyquang09" class="form-control">
+                    <span class="form-message"></span>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset class="phone">
+                    <label for="phone" class="form-label">Số điện thoại</label>
+                    <input id="phone" name="phone" type="text" placeholder="SĐT" class="form-control">
+                    <span class="form-message"></span>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset class="email">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" type="email" placeholder="VD: email@gmail.com" class="form-control">
+                    <span class="form-message"></span>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset class="password">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input id="password" name="password" type="text" placeholder="Mật khẩu" class="form-control">
+                    <span class="form-message"></span>
+                </fieldset>
+            </div>
+        
+            <div class="form-group">
+                <fieldset class="confirm-password">
+                    <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                    <input id="password_confirmation" name="password_confirmation" type="text" placeholder="Nhập lại mật khẩu" class="form-control">
+                    <span class="form-message"></span>
+                </fieldset>
+            </div>
+            <span class="agree-terms">
+                <input type="checkbox" id="agree-terms" name="agree-terms" value="OK" checked="checked">
+                 Đồng ý với
+                 <a href=""> các điều khoản dành cho người sử dụng</a>
+                </span>
+                
+                <button name="register-submit" value="Đăng kí" type="submit" class="form-submit"> Đăng kí</button>
+          </form>
+        
+        </div>
+      </div>
+    <script type="text/javascript" src="js/register.js"></script>
+      <script>
+      Validator({
+        form:'#form-1',
+        formGroupSelector: '.form-group',
+        errorSelcetor:'.form-message',
+        rules: [
+            // Các quy tắc cho tên đăng nhập
+            Validator.isRequired('#username'),
+            Validator.isAccount('#username','Tên đăng nhâp không chứa các kí tự đặc biệt'),
+            Validator.minLength('#username',8,'Tên đăng nhập tối thiểu 8 kí tự'),
+            //Các quy tắc cho Phone
+            Validator.isRequired('#phone'),
+            Validator.isRequiredNumber('#phone','Số điện thoại chỉ chứa các chữ số'),
+            Validator.minLength('#phone',10,'Số điện thoại tối thiểu 10 kí tự'),
+            //Các quy tắc cho Email
+            Validator.isRequired('#email'),
+            Validator.isEmail('#email','Vui lòng nhập đúng định dạng Email'),
+            // Các quy tắc cho password
+            Validator.isRequired('#password'),
+            Validator.minLength('#phone',8,'mật khẩu tối thiểu 8 kí tự'),
+            Validator.isRequired('#password_confirmation'),
+            Validator.isConfirmPassword('#password_confirmation',function() {
+              return document.querySelector('#form-1 #password').value;
+            },'Vui lòng nhập giá trị trùng khớp với mật khẩu')
+        ],
+        onSubmit: function (data) {
+            
+        }
+    });
+    </script>
+      
+</body>
+            
+</html>

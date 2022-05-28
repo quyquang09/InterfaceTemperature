@@ -1,0 +1,106 @@
+.display-none {
+    display: none !important;
+}
+
+.clear {
+    clear: both;
+}
+
+#content {
+    background-image: url(../img/sky.jpg);
+    min-height: 550px;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+}
+#content-heading {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    word-spacing: 1px;
+    background: #bac6ce;
+    padding: 4px 0;
+}
+#body {
+    background-color: rgb(142, 207, 207);
+    padding: 12px;
+}
+.select-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 12px;
+}
+.extra-mode {
+    flex-grow: 1;
+    margin-left: 90px;
+}
+.see-submit {
+    float: right;
+    padding: 6px 16px;
+    border-radius: 12px;
+    background: #279953;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 22px;
+}
+.mess {
+    color: red;
+    margin-right: 15%;
+}
+
+/* Graph */
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#container {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+.charting-notice {
+    font-size: 19px;
+    color: red;
+    text-align: center;
+    position:relative;
+}

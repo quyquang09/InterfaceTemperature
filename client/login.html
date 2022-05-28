@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../client/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>login</title>
+
+    <script type="text/javascript" src="js/config.js"></script>
+</head>
+<body>
+    <div id="wapper-login" >
+        <div  id="form-login">
+            <div class="close-login">
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </div>
+            <div><h1 class="form-heading">Đăng nhập</h1></div>
+            <div>
+                <form method="post" class="form">
+                    <div class="form-username">
+                        <div class="fif_wrap">
+                            <label for="email">Email</label>
+                            <span>
+                                Bạn chưa có tài khoản?
+                                <a href="register.html">Đăng kí</a>
+                            </span>
+                        </div>
+                        <div class="form-input">
+                            <input type="email" name="email" class="user-input" >
+                        </div>
+                    </div>
+                    <div class="form-pass">
+                        <div class="fif_wrap">
+                            <label for="curent-password">Mật khẩu</label>
+                            <span>
+                                <i class="fa-solid fa-eye-slash"></i>
+                                Hide
+                            </span>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" name="password" class="user-input" >
+                        </div>
+                    </div>
+                    <input type="submit" value="Đăng nhập" class="form-submit">
+                    <div class="forgot_pass">
+                        <a href="#">Quên mật khẩu ?</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $('form').submit(function() {
+                var email = $('[name=email]').val();
+                var password = $('[name=password]').val();
+                
+                $.post(BASE_URL +API_AUTHEN,
+                {
+                    'action': AUTHEN_LOGIN,
+                    'email' :email,
+                    'password':password
+                },function(data){
+                    var obj =JSON.parse(data)
+                    if(obj.status == 1){
+                        sessionStorage.setItem("username",obj.username)
+                        sessionStorage.setItem("status",obj.status)
+                        window.open('index.html','_self')
+                        alert("Đăng nhập thành công")
+                    }
+                    else {
+                        alert(obj.msg)
+                    }
+                })
+                return false;
+            })
+        })
+    </script>    
+</body>
+</html>

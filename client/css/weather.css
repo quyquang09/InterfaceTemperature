@@ -1,0 +1,151 @@
+.clear {
+    clear: both;
+}
+.col-seven {
+    width: 12.5%;
+    float: left;
+}
+
+#content {
+    background-image: url(../img/sky.jpg);
+    min-height: 550px;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+}
+#content-heading {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    background: #bac6ce;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+#content-heading h3 {
+    padding-left: 9px;
+}
+#content #search-bar {
+    width:25%;
+    margin: 0 auto;
+    padding-top: 12px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    font-size: 18px;
+}
+.search-city-icon {
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+    color: #2b352c;
+    font-size: 22px;
+}
+#search-city-input {
+    border: 0;
+    outline: 0;
+    padding: 3px 3px 3px 20px;
+    background: transparent;
+    height: 30px;
+    color: #262638;
+    font-size: 14px;
+    margin-left: 46px;
+}
+#search-city-input::placeholder {
+    color: rgb(2, 2, 2);
+    font-size: 14px;
+}
+#content .city-name {
+    margin-top: 12px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    text-transform:uppercase;
+}
+#list-timeline-werk {
+    height: 56px;
+    background: #a0b2b8;
+}
+#list-timeline-werk .wrapper-day {
+    display: flex;
+    flex-direction: column;
+    
+}
+.sub-day2 p,
+.sub-day1 p,
+.wrapper-day .sub-day1,
+.wrapper-day .sub-day2 {
+    display: inline-block;
+    text-align: center;
+}
+.wrapper-day .sub-day1 {
+
+}
+.wrapper-day .sub-day1,
+.wrapper-day .sub-day2 {
+    padding: 4px 0px;
+}
+.sub-day1 p {
+    margin-left: 4px;
+    opacity: 1;
+}
+.time-now {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.time-now label {
+    font-size: 16px; 
+}
+.time-now .value-time {
+    font-size: 28px; 
+}
+.information-weather {
+    background: #0c0d0e40;
+    width: 35%;
+    height: 45%;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 12px;
+}
+.information-weather .main-section {
+    /* text-align: center; */
+}
+.main-section .value-tempera {
+    font-size: 40px;
+    color: #ff5614;
+}
+.main-section .main-part {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-section .extra-part {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+.main-section .extra-part p {
+    margin: 5px;
+}
+
+.information-weather .additonal-section {
+    padding-top: 6px;
+    border-top: 4px solid #262638;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.additonal-section .value {
+    margin-top: 9px;
+}
