@@ -5,20 +5,20 @@ const btnMenu = $('#btn-menu')
 const Nav = $('#Nav')
 const navs =$$('.nav>li')
 const subnavs = $$('.subnav>li')
-app = {
+app1 = {
     isCloseMenu:false,
     handlEvent: function() {
         //Xử lí sự kiện đóng mở menu
-       app.isCloseMenu = btnMenu.offsetLeft === 20;
+       app1.isCloseMenu = btnMenu.offsetLeft === 20;
         btnMenu.onclick = function() {
             const navHeading =$$('.Nav-heading');
-            if(app.isCloseMenu) {
+            if(app1.isCloseMenu) {
                 Nav.style.width ='220px'
-                $('.logo-heading').innerText ='Ninja School--!';
+                $('.logo-heading').innerText ='Nhóm 6--!';
                 navHeading.forEach(function(element) {
                     element.classList.toggle("display-none");
                     });
-                    app.isCloseMenu =false;
+                    app1.isCloseMenu =false;
             }else {
                 Nav.style.width ='48px'
                 $('.logo-heading').innerText ='';
@@ -26,7 +26,7 @@ app = {
                navHeading.forEach(function(element) {
                 element.classList.toggle("display-none");
                 });
-                app.isCloseMenu=true;
+                app1.isCloseMenu=true;
                 for(var i=0;i<navs.length;i++){
                     if($(`.subnav${i}.open`)!==null){
                         $(`.subnav${i}.open`).classList.remove("open")
@@ -49,7 +49,7 @@ app = {
                     }else{
                         for(var i=0;i<navs.length;i++){
                             navs[i].classList.remove("active","boder-right")
-                            if(app.isCloseMenu===false){
+                            if(app1.isCloseMenu===false){
                                 if(currentClickMenuC1.contains($(`.subnav${i}`))){
                                     $(`.subnav${i}`).classList.toggle("open")
                                 }
@@ -65,8 +65,8 @@ app = {
         }
     },
     Start : function() {
-        app.handlEvent();
+        app1.handlEvent();
     }
 }
 
-app.Start();
+app1.Start();

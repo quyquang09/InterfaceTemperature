@@ -24,7 +24,7 @@
                     <a href="">
                         <i class="fa-brands fa-qq logo"></i>
                     </a>
-                    <h4 class="logo-heading"> Ninja school---!</h4>
+                    <h4 class="logo-heading"> Nhóm 6</h4>
 
                 </div>
                 <ul class="nav">
@@ -121,85 +121,435 @@
                 </div>
                 <!-- Begin Content -->
                 <div id="content">
-                    <div id="content-heading">
-                        <h3>Điều khiển thiết bị</h3>
-                    </div>
-                    <div class="" id="device">
-                            <div id="device-Lamp" class="col col-two">
-                                <div class="device-body ">
-                                    <div class="img-device"><img src="../client/img/denoff.png" alt="Bóng đèn"></div>
-                                    <div class="device-address">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <h3>Phòng ngủ</h3>
+                    <div id="control" class="">
+                        <div class="control-device">
+                            <h2 class="control-heading head">Điều khiển thiết bị</h2>
+                            <!-- Begin Nav-device -->
+                            <div id="nav-control-device">
+                                <span class="active-nav" id="toggle-lamp"><i class="fa-regular fa-lightbulb lamspan-icon"></i></span>
+                                <span id="toggle-harmonic"><i class="fa-regular fa-snowflake fan-icon"></i></span>
+                                <span id="toggle-fan"><i class="fa-solid fa-fan fan-icon"></i></i></span>
+                                <span id="toggle-tv"><i class="fa-solid fa-tv tivi_icon "></i></span>
+                            </div>
+                            <!-- End Nav-device -->
+                            <!-- Control -device-Lamp -->
+                            <div class="" id="device">
+                                <div class="device-lamp frames row" >
+                                    <div class="col col-third mt-16  " id="lamp-bedroom">
+                                        <div class="device-body">
+                                            <img src="../client/img/denoff.png" alt="Bóng đèn" class="img">
+                                            <h3 class="device-name">Phòng ngủ</h3>
+                                            <span class="status">
+                                                <p class="device-status">Tình trạng: </p>
+                                                Đang Tắt
+                                            </span>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime1">
+                                                Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle switch-toggle1" />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="nav-control">
-
+                            
+                                    <div class="col col-third mt-16 " id="lamp-guestRoom">
+                                        <div class="device-body">
+                                            <img src="../client/img/denoff.png" alt="Bóng đèn" class="img">
+                                            <h3 class="device-name">Phòng Khách</h3>
+                                            <span class="status">
+                                                <p class="device-status">Tình trạng: </p>
+                                                Đang Tắt
+                                            </span>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime2">
+                                                    Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle switch-toggle2" />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span class="status">
-                                        <p class="device-status">Tình trạng: </p>
-                                        Đang Tắt
-                                    </span>
-                                    <span class="timeused" >
-                                        <p class="device-timeused">Thời gian sử dụng:</p>
-                                        <span id="displayTime1">
-                                        Giờ : Phút : Giây
-                                        </span>
-                                    </span>
-                                    <div class="timer">
-                                        <p >Cài đặt hẹn giờ: </p>
-                                        <span class="timer-val" >
-                                            <input type="number"  placeholder="Giờ" value=""/> 
-                                            <input type="number"  placeholder="Phút" value=""/> 
-                                            <input type="button" id="save-timer" value="Đặt"/>
-                                        </span>
-                                    </div>
-                                    <div class="toggle-button-cover">
-                                        <div class="button r" id="button-1">
-                                        <input type="checkbox" class="switch-toggle switch-toggle1" />
-                                        <div class="knobs"></div>
-                                        <div class="layer"></div>
+                                    <div class="col col-third mt-16 "id="Lamp-kitchen">
+                                        <div class="device-body">
+                                            <img src="../client/img/denoff.png" alt="Bóng đèn" class="img">
+                                            <h3 class="device-name">Phòng bếp</h3>
+                                            <span class="status">
+                                                <p class="device-status">Tình trạng: </p>
+                                                Đang Tắt
+                                            </span>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime3">
+                                                Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle switch-toggle3" />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                                
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="device-Tivi" class="col col-two">
-                                <div class="device-body">
-                                    <div class="img-device"><img src="../client/img/tivioff .png" alt="Ti vi"></div>
-                                    <div class="device-address">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <h3>Phòng ngủ</h3>
-                                    </div>
-                                    <div id="nav-control">
-                                        <span class="home"><i class="fa-solid fa-house icon-btn"  id="icon-toggle"></i></span>
-                                        <span class="prev"><i class="fa-solid fa-backward icon-btn" id="icon-toggle"></i></span>
-                                        <span class="next"><i class="fa-solid fa-forward icon-btn" id="icon-toggle"></i></span>
-                                        <span class="on-off"><i class="fa-solid fa-power-off icon-btn" ></i></span>
-                                    </div>
-                                    <div class="control-tivi">
-                                        <span><i class="fa-solid fa-minus icon-minus icon-btn" id="icon-toggle"></i></span>
-                                        <div class="progress-bar-wrapper">
-                                            <div class="tivi-value device-value ">
-                                                <h3> Âm lượng </h3>
-                                                <h3 id="valueTivi1">50</h3>
+                                <!-- End Control -device-Lamp -->
+                                <!-- Begin Control -device-Harmonic -->
+                            <div class="close" id="device">
+                                <div class="device-harmonic frames row" id="harmonic-bedroom">
+                                    <div class="col col-two mt-16 mgr-32">
+                                        <div class="device-body">
+                                            <div class="r">
+                                                <img src="./img/dieuhoaoff.png" alt="Điều hoà" class="img">
+                                                    <h3 class=" close valuetemp1">16</h3>
                                             </div>
-                                            <div class="progress-bar"></div>
+                                            <h3 class="device-name">Phòng ngủ</h3>
+                                            <div id="nav-control">
+                                                <span class="dew"><i class="fa-solid fa-droplet icon-btn"></i></span>
+                                                <span class="cold"><i class="fa-regular fa-snowflake icon-btn"></i></span>
+                                                <span class="wind"><i class="fa-solid fa-radiation icon-btn"></i></span>
+                                                <span class="dried"><i class="fa-solid fa-sun icon-btn"></i></span>
+                                            </div>
+                                            <div class="control-temp">
+                                                <span><i class="fa-solid fa-minus icon-minus" id="icon-toggle"></i></span>
+                                                <div class="progress-bar-wrapper">
+                                                    <div class="temp-value device-value">
+                                                    </div>
+                                                    <div class="progress-bar"></div>
+                                                </div>
+                                                <span><i class="fa-solid fa-plus icon-plus" id="icon-toggle"></i></span>
+                                            </div>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime1">
+                                                Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle" id="statust-harmonic1" />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                            </div>       
                                         </div>
-                                        <span><i class="fa-solid fa-plus icon-plus icon-btn"id="icon-toggle"></i></span>
                                     </div>
-                                    <div id="subnav-control">
-                                        <p class="sub1 mgr-64">
-                                            <span class=""><i class="fa-solid fa-forward-fast"></i></span>
-                                            <span class=""><i class="fa-solid fa-stop"></i></span>
-                                        </p>
-                                        <p class="sub2 mgl-64">
-                                            <span class=""><i class="fa-solid fa-volume-xmark"></i></span>
-                                            <span class=""><button> EXIT</button></span>
-                                        </p>
+                                        <div class="col col-two mt-16 mgr-32">
+                                            <div class="device-body">
+                                                <div class="r">
+                                                    <img src="./img/dieuhoaoff.png" alt="Điều hoà" class="img">
+                                                        <h3 class=" close valuetemp1">16</h3>
+                                                </div>
+                                                <h3 class="device-name">Phòng khách</h3>
+                                                <div id="nav-control">
+                                                    <span class="dew"><i class="fa-solid fa-droplet icon-btn"></i></span>
+                                                    <span class="cold"><i class="fa-regular fa-snowflake icon-btn"></i></span>
+                                                    <span class="wind"><i class="fa-solid fa-radiation icon-btn"></i></span>
+                                                    <span class="dried"><i class="fa-solid fa-sun icon-btn"></i></span>
+                                                </div>
+                                                <div class="control-temp">
+                                                    <span><i class="fa-solid fa-minus icon-minus" id="icon-toggle"></i></span>
+                                                    <div class="progress-bar-wrapper">
+                                                        <div class="temp-value device-value">
+                                                        </div>
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <span><i class="fa-solid fa-plus icon-plus" id="icon-toggle"></i></span>
+                                                </div>
+                                                <span class="timeused" >
+                                                    <p class="device-timeused">Time used:</p>
+                                                    <span id="displayTime1">
+                                                    Giờ : Phút : Giây
+                                                    </span>
+                                                </span>
+                                                <div class="timer">
+                                                    <p >Hẹn giờ:</p>
+                                                    <span class="timer-val" >
+                                                        <input type="number"  placeholder="Giờ" value=""/> 
+                                                        <input type="number"  placeholder="Phút" value=""/> 
+                                                        <input type="button" id="save-timer" value="Đặt"/>
+                                                    </span>
+                                                </div>
+                                                <div class="toggle-button-cover">
+                                                    <div class="button r" id="button-1">
+                                                    <input type="checkbox" class="switch-toggle" id="statust-harmonic2" />
+                                                    <div class="knobs"></div>
+                                                    <div class="layer"></div>
+                                                    </div>
+                                                </div>       
+                                            </div>
+                                    </div>
+                                    
                                     </div>
                                 </div>
+                            
+                             <!-- End Control -device-harmonic -->
+                             <!-- Begin Control -device-Fan -->
+                             <div class="close" id="device">
+                                <div class="device-Fan frames row" >
+                                    <div class="col col-third mt-16" id="Fan-bedroom">
+                                        <div class="device-body">
+                                            <img src="./img/quatoff.png" alt="Quạt" class="img " id="imgFan1off">
+                                            <div class="img openFan" id="imgOpenFan1">
+                                                <img src="./img/canhquat.png" alt="Quạt" class="imgOpenFan1">
+                                                <img src="./img/dequat.png" alt="Quạt" class="img2">
+                                            </div>
+                                            <h3 class="device-name">Phòng ngủ</h3>
+                                            <div id="nav-control">
+                                                <span class="turn"><i class="fa-solid fa-arrows-spin icon-btn"></i></span>                                          </span>                                         </span>
+                                                <span class="dew"><i class="fa-solid fa-wind icon-btn"></i></span>
+                                                <span class="driedFan"><i class="fa-solid fa-sun icon-btn"></i></span>
+                                            </div>
+                                            <div id="speed">
+                                                <h3 class="speed-head">Tốc độ: </h3>
+                                                <p class="speed-body">
+                                                <input type="radio" id="low" name="Fan1-speed" value="LOW" checked="checked">
+                                                <label for="LOW">Low</label>
+                                                <input type="radio" id="med" name="Fan1-speed" value="MED">
+                                                <label for="Med">Med</label>
+                                                <input type="radio" id="high"name="Fan1-speed"  value="HIGH">
+                                                <label for="High">High</label>
+                                                </p>
+                                            </div>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime1">
+                                                Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle"id="statust-Fan1" />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-third mt-16" id="Fan-kitchen">
+                                        <div class="device-body">
+                                            <img src="./img/quatoff.png" alt="Quạt" class="img">
+                                            <h3 class="device-name">Phòng Khách</h3>
+                                            <div id="nav-control">
+                                                <span class=""><i class="fa-solid fa-arrows-spin icon-btn"></i></span>                                          </span>                                         </span>
+                                                <span class=""><i class="fa-solid fa-wind icon-btn"></i></span>
+                                                <span class=""><i class="fa-solid fa-sun icon-btn"></i></span>
+                                            </div>
+                                            <div id="speed">
+                                                <h3 class="speed-head">Tốc độ: </h3>
+                                                <p class="speed-body">
+                                                <input type="radio" id="low" name="Fan2-speed" value="LOW" checked="checked" >
+                                                <label for="LOW">Low</label>
+                                                <input type="radio" id="med" name="Fan2-speed" value="MED">
+                                                <label for="Med">Med</label>
+                                                <input type="radio" id="high"name="Fan2-speed"  value="HIGH">
+                                                <label for="High">High</label>
+                                                </p>
+                                            </div>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime1">
+                                                Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle" id="statust-Fan1"  />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-third mt-16 " id="Fan-guestRooom">
+                                        <div class="device-body">
+                                            <img src="./img/quatoff.png" alt="Quạt" class="img">
+                                            <h3 class="device-name">Phòng Bếp</h3>
+                                            <div id="nav-control">
+                                                <span class=""><i class="fa-solid fa-arrows-spin icon-btn"></i></span>                                          </span>                                         </span>
+                                                <span class=""><i class="fa-solid fa-wind icon-btn"></i></span>
+                                                <span class=""><i class="fa-solid fa-sun icon-btn"></i></span>
+                                            </div>
+                                            <div id="speed">
+                                                <h3 class="speed-head">Tốc độ: </h3>
+                                                <p class="speed-body">
+                                                <input type="radio" id="low" name="Fan3-speed" value="LOW" checked="checked">
+                                                <label for="LOW">Low</label>
+                                                <input type="radio" id="med" name="Fan3-speed" value="MED">
+                                                <label for="Med">Med</label>
+                                                <input type="radio" id="high"name="Fan3-speed"  value="HIGH">
+                                                <label for="High">High</label>
+                                                </p>
+                                            </div>
+                                            <span class="timeused" >
+                                                <p class="device-timeused">Time used:</p>
+                                                <span id="displayTime1">
+                                                Giờ : Phút : Giây
+                                                </span>
+                                            </span>
+                                            <div class="timer">
+                                                <p >Hẹn giờ:</p>
+                                                <span class="timer-val" >
+                                                    <input type="number"  placeholder="Giờ" value=""/> 
+                                                    <input type="number"  placeholder="Phút" value=""/> 
+                                                    <input type="button" id="save-timer" value="Đặt"/>
+                                                </span>
+                                            </div>
+                                            <div class="toggle-button-cover">
+                                                <div class="button r" id="button-1">
+                                                <input type="checkbox" class="switch-toggle switch-toggle1" />
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
-                </div>
+                        <!-- Begin Control -device-Tivi -->
+                        <div class="close" id="device">
+                            <div class="device-tivi frames row" >
+                                <div class="col col-two mt-16 mgr-32" id="tivi-bedroom">
+                                    
+                                    <div class="device-body">
+                                        <div>
+                                            <h1 class="currentProgram">OFF <p></p></h1>
+                                            <img src="./img/tivioff.png" alt="tivi" class="img">
+                                        </div>
+                                        <h3 class="device-name">Phòng ngủ</h3>
+                                        <div id="nav-control">
+                                            <span class="home"><i class="fa-solid fa-house icon-btn"  id="icon-toggle"></i></span>
+                                            <span class="prev"><i class="fa-solid fa-backward icon-btn" id="icon-toggle"></i></span>
+                                            <span class="next"><i class="fa-solid fa-forward icon-btn" id="icon-toggle"></i></span>
+                                            <span class="on-off"><i class="fa-solid fa-power-off icon-btn" ></i></span>
+                                        </div>
+                                        <img src="./img/enter.png" alt="" class="img-btn">
+                                        <div class="control-tivi">
+                                            <span><i class="fa-solid fa-minus icon-minus icon-btn" id="icon-toggle"></i></span>
+                                            <div class="progress-bar-wrapper">
+                                                <div class="tivi-value device-value ">
+                                                    <h3> Âm lượng </h3>
+                                                    <h3 id="valueTivi1">50</h3>
+                                                </div>
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                            <span><i class="fa-solid fa-plus icon-plus icon-btn"id="icon-toggle"></i></span>
+                                        </div>
+                                        <div id="subnav-control">
+                                            <p class="sub1 mgr-64">
+                                                <span class=""><i class="fa-solid fa-forward-fast icon-btn"></i></span>
+                                                <span class=""><i class="fa-solid fa-stop"></i></span>
+                                            </p>
+                                            <p class="sub2 mgl-64">
+                                                <span class=""><i class="fa-solid fa-volume-xmark"></i></span>
+                                                <span class=""><button> EXIT</button></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-two mt-16 mgl-32" id="tivi-guestroom">
+                                    <div class="device-body">
+                                        <div>
+                                            <h1 class="currentProgram">OFF <p></p></h1>
+                                            <img src="./img/tivioff.png" alt="tivi" class="img">
+                                        </div>
+                                        <h3 class="device-name">Phòng Khách</h3>
+                                        <div id="nav-control">
+                                            <span class=""><i class="fa-solid fa-house icon-btn"id="icon-toggle"></i></span>
+                                            <span class=""><i class="fa-solid fa-backward icon-btn"id="icon-toggle"></i></span>
+                                            <span class=""><i class="fa-solid fa-forward icon-btn"id="icon-toggle"></i></span>
+                                            <span class=""><i class="fa-solid fa-power-off icon-btn"></i></span>
+                                        </div>
+                                        <img src="./img/enter.png" alt="" class="img-btn">
+                                        <div class="control-tivi">
+                                            <span><i class="fa-solid fa-minus icon-minus"id="icon-toggle"></i></span>
+                                            <div class="progress-bar-wrapper">
+                                                <div class="tivi-value device-value ">
+                                                    <h3> Âm lượng </h3>
+                                                    <h3 id="valueTivi2">50</h3>
+                                                </div>
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                            <span><i class="fa-solid fa-plus icon-plus"id="icon-toggle"></i></span>
+                                        </div>
+                                        <div id="subnav-control">
+                                            <p class="sub1 mgr-64">
+                                                <span class=""><i class="fa-solid fa-forward-fast icon-btn"></i></span>
+                                                <span class=""><i class="fa-solid fa-stop"></i></span>
+                                            </p>
+                                            <p class="sub2 mgl-64">
+                                                <span class=""><i class="fa-solid fa-volume-xmark"></i></span>
+                                                <span class=""><button> EXIT</button></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
 
             <!-- End Content -->
         </div>
@@ -207,6 +557,7 @@
     <script type="text/javascript" src="./js/session.js"></script>
     <script type="text/javascript" src="js/logout.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/dashBoardDevice.js"></script>
 </body>
 
 </html>

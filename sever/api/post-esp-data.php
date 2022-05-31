@@ -16,8 +16,8 @@ $api_key_value = "tPmAT5Ab3j7F9";
     $t = date("H:i:s");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nhietdo = test_input($_POST["nhietdo"]);
-        $doam = test_input($_POST["doam"]);
+        $nhietdo =$_POST["nhietdo"];
+        $doam = $_POST["doam"];
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection

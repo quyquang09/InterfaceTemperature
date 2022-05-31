@@ -1,167 +1,287 @@
+/* reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Begin Class dùng chung */
+.active-header {
+    background: #122e46 !important;
+    color: #04aa6d;
+}
+.active-btn {
+    background: #ddbc02 !important;
+    color: #000 !important;
+}
+
+@keyframes move_right{
+    0%{left:0px;}
+    100%{left:500px;}
+}
+.open {
+    display: block !important;
+    
+}
+.close {
+    display: none;
+}
+.openFan {
+    display: none !important;
+}
+.active-nav {
+    background: rgb(17, 218, 197) !important;
+}
+
+.press-drop {
+    background: #ddbc02  !important;
+}
+.pull-right{
+    float: right;
+    text-align: center;
+    font-size: 16px;
+}
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important;
+}
+#main {
+
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.mglr-32 {
+    margin-left: 32px !important ;
+    margin-right: 32px !important;
+}
+.mgl-64 {
+    margin-left: 64px!important;
+}
+.mgr-64 {
+    margin-right: 64px!important;
+}
+.mgl-32 {
+    margin-left: 32px!important;
+}
+.mgr-32 {
+    margin-right: 32px!important;
+}
+.col{
+    float: left;
+    padding:0 16px;
+    
+}
+
+.row{
+    margin-left: -8px ;
+    margin-right: -8px ;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear:both ;
+}
+.col-full{
+    width: 100%;
+}
+
+.col-third{
+    width: 33.3333%;
+    
+}
 .col-two{
     width: 50%;
 }
-.col {
-    float: left;
-    padding: 0 30px;
+.col-four{
+    width: 25%;
 }
-.mt-16 {
-    margin-top: 16px !important;
+.frames {
+    padding: 0px 16px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
 }
-.icon-btn {
-    background: #798399;
-    box-shadow: 0 0 7px #070e0e; 
+#icon-toggle {
+    display: block;
+}
+
+#icon-toggle:active {
+    box-shadow:  4px 4px 6px 0 #409292,
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 #448a8a,
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+      background-color: #03f437 !important;
+      color: #000 !important;
+}
+/* End những class dùng chung */
+
+/* Begin Content */
+#content{
+
+}
+.control-heading {
+    font-size: 28px;
+    color: #26d711;
+    text-align: center;
+    font-weight: 600;
+}
+
+#control {
+    padding-top: 10px;
+    background-color: #031321;
+}
+.control-device {
+    min-height: 650px;
+}
+/* <!-- Begin Nav-device --> */
+#nav-control-device
+ {
+    display: flex;
+    padding: 12px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 600px;
+}
+#nav-control-device span
+{
+    padding: 19px 8px;
+    background: #323d46;
+    border-radius: 15px;
+    width: 92px;
+    text-align: center;
+    display: inline-block;
+    box-shadow:  0px -4px 7px  #79848d ;
     cursor: pointer;
-    padding: 7px 8px;
-    border-radius: 50%;
-    font-size: 18px;
+    font-size: 22px;
+    color: #ffff;
 }
-#content {
-    max-width: 900px;
-    min-width: 720px;
+#nav-control-device span:hover {
+    background: #1a2b38;
+}
+#device {
+    position: relative;
+    /* z-index: 0; */
+    /* left: 10%; */
+}
+
+/* animation đèn*/
+#lamp-bedroom {
+    animation: modalLeftToRight ease 0.4s; 
+}
+#Lamp-kitchen {
+    animation: modalRightToLeft ease 0.4s; 
+}
+#lamp-guestRoom {
+    animation: modalUpToDown ease 0.4s;
+}
+
+/* animation điều hoà*/
+#harmonic-bedroom {
+    animation: modalLeftToRight ease 0.6s;
+}
+#harmonic-guestRoom {
+    animation: modalRightToLeft1 ease 0.6s;
+}
+/* animation quạt*/
+#Fan-bedroom{
+    animation: modalLeftToRight ease 0.9s;
+}
+#Fan-kitchen{
+    animation: modalLeftToRight ease 0.6s;
+}
+#Fan-guestRooom{
+    animation: modalLeftToRight ease 0.3s;
+}
+/* animation tivi*/
+#tivi-bedroom {
+    animation: modalUpToDown ease 0.4s;
+}
+#tivi-guestroom {
+    animation: modalDownToUp ease 0.4s;
+}
+/* animation sensor nhiet do */
+#ssTemperature{
+    animation: modalRightToLeft ease 0.3s;
+}
+#ssHumidity
+{
+    animation: modalLeftToRight ease 0.3s;
+}
+
+.currentProgram {
+    display: flex;
+    justify-content: center;
+    color: #03f437;
+}
+.img{
+    width: 80%;
+    height: 170px;
+    display: block;
+    position: relative;
     margin: auto;
 }
 .device-body {
-    display: block;
     background-color: #323844;
     padding: 0 12px;
     border-radius: 40px;
 }
-.img-device {
-    width: 100%;
-}
-.img-device img {
-    width: 100%;
-    max-width: 300px;
-    height: 220px;
-    display: block;
-    margin:10px auto;
-    padding-top: 18px;
-}
-.device-address {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.device-address h3 {
-    margin-left: 12px;
-}
-#nav-control {
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 17px 0px;
-}
-/* Tivi */
-#device-Tivi {
-}
-.device-body .control-tivi {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 45px;
-}
-.control-tivi .progress-bar-wrapper 
-{
-    width: 100%;
-    height: 25px;
-    background-color: #cac5ac;
-    margin: 20px 15px;
-    border-radius: 25px;
-    position: relative;
-    display: flex;
-}
-.control-tivi .progress-bar {
-    height: 100%;
-    width: 50%;
-    background: #26c248;
-    border-radius: 25px;
-    text-align: center;
-    line-height: 50px;
+
+.img .imgOpenFan1 {
     position: absolute;
-    display: inline-block;
-    z-index: 1;
-    opacity: 0.8;
+    top: -16px;
+    left: 12px;
+    padding-left: 2px;
+    width: 90%;
 }
-.control-tivi .device-value {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.img .img2 {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 9px;
     width: 100%;
-    margin-right: 20px;
 }
-#subnav-control {
-    margin: 12px 0;
-    padding: 12px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#subnav-control .sub1, #subnav-control .sub2 {
-    cursor: pointer;
-    font-size: 23px;
-    width: 45%;
-    height: 26px;
-    margin: 16px 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: #15181f;
-    color: #ffffff;
-    border-radius: 25px;
-    box-shadow: -3px -3px 6px #15181f;
-}
-#subnav-control .sub2 button {
-    padding: 3px;
-    border-radius: 30px;
-}
-/* Quạt */
-#device-Lamp .timeused,
-#device-Lamp .status {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
-}
-.timer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0;
-}
-.timer-val input[type="number"] {
-    width: 50px;
-    height: 30px;
-}
-.timer-val {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.timer #save-timer {
-    margin-left: 10px;
-    padding: 4px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #03f437;
-}
-.timer p {
-    width: 100%;
+#control .device-name {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 14px;
 }
 
 
-/* Nút toggle */
-.toggle-button-cover {
-    position: relative;
-    padding: 40px 15px 30px 15px;
-  }
-  
+  /* Nút toggle */
 .knobs,
 .layer {
     position: absolute;
@@ -174,8 +294,8 @@
 .button {
     position: relative;
     top: 50%;
-    width: 84px;
-    height: 38px;
+    width: 79px;
+    height: 36px;
     margin: -20px auto 0 auto;
     overflow: hidden;
 }
@@ -214,10 +334,10 @@
 #button-1 .knobs:before {
     content: "OFF";
     position: absolute;
-    top: 4px;
+    top: 3px;
     left: 4px;
-    width: 24px;
-    height: 14px;
+    width: 23px;
+    height: 13px;
     color: #fff;
     font-size: 13px;
     font-weight: bold;
@@ -231,7 +351,7 @@
   
 #button-1 .switch-toggle:checked + .knobs:before {
     content: "ON";
-    left: 48px;
+    left: 44px;
     background-color: #03f437;
 }
   
@@ -244,3 +364,276 @@
 #button-1 .layer {
     transition: 0.3s ease all;
 }
+/* Điều hoà */
+.device-harmonic .r {
+    position: relative;
+}
+.device-harmonic .r .valuetemp1 {
+    position: absolute;
+    background: #CCCCCD;
+    color: #ff0000;
+    top: 28%;
+    left: 34%;
+    padding: 2px 22px;
+    font-size: 15px;
+    border-radius: 13px;
+}
+
+/* Điều khiển quạt */
+#speed {
+    margin-bottom: 12px;
+    border: 1px dotted #fafafa;
+    padding: 25px 10px;
+    position: relative;
+    margin: 20px 5px;
+}
+#speed .speed-head {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    padding: 0 10px;
+    color: #96da11;
+    background: #323844;
+}
+
+input[type='radio'] {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+
+}
+
+input[type='radio'] + label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+    margin-right: 10px;
+    color: #0b6a2f;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#speed .speed-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+#nav-control-device span i {
+    width: 100%;
+    font-size: 28px;
+    position: relative;
+    color: #ffffff;
+}
+#nav-control {
+    margin: 12px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#subnav-control {
+    margin: 12px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#subnav-control .sub1,
+#subnav-control .sub2 {
+    cursor: pointer;
+    font-size: 23px;
+    line-height: 30px;
+    width: 45%;
+    margin: 16px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #15181f;
+    color: #ffffff;
+    border-radius: 25px;
+    box-shadow: -3px -3px 6px #15181f;
+}
+#subnav-control .sub2 button {
+    padding: 3px;
+    border-radius: 30px;
+}
+
+.device-body #nav-control .icon-btn {
+    position: relative;
+    font-size: 18px;
+    background-color: #201d0d;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #070e0e;  
+    cursor: pointer;
+}
+.device-body #nav-control .icon-btn:hover {
+    color: #ffffff;
+    box-shadow: 2px 4px 7px  #2d6460 ;
+    text-shadow: 0 0 7px #153535;
+    background: #091616;
+    transition:  .2s;
+    transform: scale(1.3);
+}
+
+.device-body #nav-control .fa-droplet.icon-btn {
+    padding-left: 12px;
+    padding-right: 11px;
+}
+.device-body .control-tivi, 
+.device-body .control-temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.control-temp .progress-bar-wrapper ,
+.control-tivi .progress-bar-wrapper 
+{
+    width: 100%;
+    height: 28px;
+    background-color: #cac5ac;
+    margin: 8px 0;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+}
+.control-temp .progress-bar {
+    height: 100%;
+    width: 50%;
+    background: #26c248;
+    border-radius: 25px;
+}
+.control-tivi .progress-bar {
+    height: 100%;
+    width: 50%;
+    background: #26c248;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    opacity: 0.8;
+}
+.control-tivi .device-value {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+}
+.icon-minus,
+.icon-plus {
+    font-size: 24px;
+    margin: 5px 12px;
+    padding: 4px;
+    border-radius: 40%;
+    background-color: #091a2e;
+    color: #ffffff;
+    box-shadow: 2px 4px 7px  #051f1d ;
+    cursor: pointer;
+}
+/* begin css Lamp */
+#control .timeused,
+#control .status{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+span.timeused {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.device-timeused {
+    margin: 14px 0;
+}
+.timer {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;  
+}
+.timer #save-timer {
+    margin-left: 10px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #03f437;
+}
+.timer-val input[type="number"] 
+ {
+    width: 45px;
+    height: 24px;
+}
+/* End css Lamp */
+
+
+.device-tivi .img-btn {
+    width: 35%;
+    border-radius: 50%;
+    box-shadow: 0px -4px 7px #051f1d;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    display: block;
+}
+
+
+.displayTime {
+    display: flex;
+}
+.toggle-button-cover {
+    position: relative;
+    padding: 40px 15px 30px 15px;
+  }
+
+/* Begin bảng thông báo */
+.messageError {
+    content: "";
+    background-color: #000000;
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 180px;
+    top:40%;
+    left: 40%;
+    border-radius: 10px;
+    box-shadow: 0 0 7px #2ef5f5;
+    z-index: 5;
+}
+.messageError .imgMessError {
+    width: 100%;
+    margin-top: -8px;
+}
+.messageError h1{
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+.messageError button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: rgb(48, 133, 214);
+    position: absolute;
+    bottom: 10px;
+    left: 41%;
+    border-radius: 10px;
+}
+
+.messageError button:hover {
+    background: rgb(38, 105, 167);;
+}
+/* end bảng thông báo */

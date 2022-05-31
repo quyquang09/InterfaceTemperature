@@ -187,6 +187,5 @@ fetch(BASE_URL+'api/getvalueSensor.php')
             {
                 databaseSensor.push(data.valueSensor[i]);
             }
-        }
-    )
+        })
 
